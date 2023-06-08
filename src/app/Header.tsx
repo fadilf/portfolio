@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from 'react';
 import clsx, { ClassArray, ClassDictionary } from 'clsx';
 import Typed from 'typed.js';
+import Link from 'next/link';
 
 export default function Header() {
 
@@ -20,7 +21,7 @@ export default function Header() {
 `\tbox-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
 \t            0 2px 4px -2px rgb(0 0 0 / 0.1);`,
 `\ttransform: rotate(3deg);`,
-`\tbackground: center / cover url('/<span id="gallery-files" class="font-bold text-zinc-500"></span>');` 
+`\tbackground: center / cover url('/<span id="gallery-files" class="font-bold text-gray-500"></span>');` 
 	];
 	let stylingsArrRepacked: string[] = [];
 
@@ -116,17 +117,20 @@ export default function Header() {
 	}, []);
 
 	return (
-        <header id='about'>
-			<div className='flex justify-center mt-20 items-center'>
+        <header id='about' className='flex min-h-screen min-h-[100svh] align-middle justify-center'>
+			<div className='flex justify-center items-center'>
 				<div ref={stylingParent} className='max-w-xl text-center relative z-10'>
-					<h1 className='text-5xl font-semibold'>Hi, I'm Fadil!</h1>
+					<h1 className='text-7xl font-semibold text-gray-50'>Hi, I'm Fadil!</h1>
 					<p className='my-5'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
 					</p>
+					<p>
+						You can see my projects below and check out my <Link className='font-semibold' href="">CV</Link>, <Link className='font-semibold' href="https://github.com/fadilf/">GitHub</Link>, and <Link className='font-semibold' href="">LinkedIn</Link>.
+					</p>
 					<div className={clsx(
-						'inline-block bg-zinc-800 min-w-[32rem] align-top',
-						'm-3 px-4 py-3 border-2 border-zinc-700 rounded-md',
-						'text-left text-xs text-zinc-600 font-mono whitespace-pre-wrap')
+						'inline-block bg-gray-900 min-w-[32rem] align-top',
+						'm-3 px-4 py-3 border-2 border-gray-800 rounded-md',
+						'text-left text-xs text-gray-600 font-mono whitespace-pre-wrap')
 					}>
 						<div>{`#header-image {`}</div>
 						<div>    <span ref={stylingsElem}></span></div>
@@ -135,8 +139,8 @@ export default function Header() {
 				</div>
 				<div>
 					<div className='duration-300' ref={veilElem}>
-						<div className='dotted-bg bg-[url("/dotted.svg")] h-80 w-0 duration-300 -mb-80 relative scale-150 -rotate-3 shadow-[inset_#18181b_0_0_4rem_4rem] -z-10 bg-[length:5rem]'></div>
-						<div className='veil-bg bg-zinc-800 rounded-xl h-80 w-0 duration-300 -mb-80'></div>
+						<div className='dotted-bg bg-[url("/dotted.svg")] h-80 w-0 duration-300 -mb-80 relative scale-150 -rotate-3 shadow-[inset_#030712_0_0_4rem_4rem] -z-10 bg-[length:5rem]'></div>
+						<div className='veil-bg bg-gray-900 rounded-xl h-80 w-0 duration-300 -mb-80'></div>
 						<div ref={imgElem} className='duration-300 h-0 w-0 bg-center bg-cover opacity-0'></div>
 					</div>
 				</div>

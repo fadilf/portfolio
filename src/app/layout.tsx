@@ -17,9 +17,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={clsx(inter.className, 'bg-zinc-900 text-zinc-50')}>
+			<body className={clsx(inter.className, 'bg-gray-950','text-gray-200')}>
 				<NavBar />
-				<main className='pt-14'>
+				<main>
 					{children}
 				</main>
 			</body>
