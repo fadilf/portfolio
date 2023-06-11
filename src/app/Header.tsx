@@ -38,9 +38,14 @@ export default function Header() {
 						case 1:
 							imgElem.current.style.height = "20rem";
 							imgElem.current.style.width = "28rem";
-							if (veilElem.current != null)
+							if (veilElem.current != null) {
 								veilElem.current.style.marginLeft = "5rem";
-							document.querySelectorAll<HTMLElement>('.dotted-bg, .veil-bg').forEach((elem) => {
+							}
+							document.querySelectorAll<HTMLElement>('.veil-bg').forEach((elem) => {
+								elem.style.width = "28rem";
+							});
+							document.querySelectorAll<HTMLElement>('.dotted-bg').forEach((elem) => {
+								elem.style.animation = "900ms ease-in-out 300ms 1 normal forwards running search";
 								elem.style.width = "28rem";
 							});
 							break;
@@ -55,7 +60,7 @@ export default function Header() {
 							if (veilElem.current != null)
 								veilElem.current.style.transform = "rotate(3deg)";
 								document.querySelectorAll<HTMLElement>('.dotted-bg').forEach((elem) => {
-									elem.style.transform = "rotate(-6deg) scale(1.5)";
+									elem.style.transform = "rotate(-6deg) scale(2)";
 								});
 							imgElem.current.style.backgroundImage = "url('/a_decade_of_experience.jpg')";
 							break;
@@ -122,7 +127,7 @@ export default function Header() {
 				<div ref={stylingParent} className='max-w-xl text-center relative z-10'>
 					<h1 className='text-7xl font-semibold text-gray-50'>Hi, I'm Fadil!</h1>
 					<p className='my-5'>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
+						Developer of things that are novel and practical, physical and digital, at every level of abstraction. Currently working at DMC Inc.
 					</p>
 					<p>
 						You can see my projects below and check out my <Link className='font-semibold' href="">CV</Link>, <Link className='font-semibold' href="https://github.com/fadilf/">GitHub</Link>, and <Link className='font-semibold' href="">LinkedIn</Link>.

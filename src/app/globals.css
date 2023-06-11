@@ -35,6 +35,32 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+.dotted-bg {
+  background-image: url("/dotted.svg");
+  height: 20rem;
+  width: 0;
+  /* transition-duration: 300ms; */
+  margin-bottom: -20rem;
+  position: relative;
+  transform: scale(2) rotate(-3deg);
+  box-shadow: inset #030712 0 0 4rem 10rem;
+  z-index: -10;
+  background-size: 4rem;
+  /* animation: search 1s ease-in-out; */
+}
+
+@keyframes search {
+  0% {
+    box-shadow: inset #030712 0 0 4rem 10rem;
+  }
+  15% {
+    box-shadow: inset #030712 0 0 4rem 5rem;
+  }
+  100% {
+    box-shadow: inset #030712 0 0 4rem 5.5rem;
+  }
+}
+
 .jigsaw-text {
   display: inline-block;
   width: calc(100% - 18rem);
@@ -101,6 +127,42 @@ body {
   transition-delay: 600ms;
 }
 
+.jigsaw.show .piece-1 *,
+.jigsaw.show .piece-1 *::before,
+.jigsaw.show .piece-1 *::after {
+  animation: piece-cycle 4000ms linear none infinite;
+}
+.jigsaw.show .piece-2 *,
+.jigsaw.show .piece-2 *::before,
+.jigsaw.show .piece-2 *::after {
+  animation: piece-cycle 4000ms linear 250ms infinite;
+}
+.jigsaw.show .piece-3 *,
+.jigsaw.show .piece-3 *::before,
+.jigsaw.show .piece-3 *::after {
+  animation: piece-cycle 4000ms linear 500ms infinite;
+}
+.jigsaw.show .piece-4 *,
+.jigsaw.show .piece-4 *::before,
+.jigsaw.show .piece-4 *::after {
+  animation: piece-cycle 4000ms linear 750ms infinite;
+}
+
+@keyframes piece-cycle {
+  0% {
+    border-color: rgb(69 10 10);
+  }
+  33% {
+    border-color: rgb(5 46 22);
+  }
+  66% {
+    border-color: rgb(23 37 84);
+  }
+  100% {
+    border-color: rgb(69 10 10);
+  }
+}
+
 .piece-1 {
   z-index: 10;
 }
@@ -160,8 +222,8 @@ body {
   position: relative;
   z-index: 3;
   border: var(--piece-border-size) solid var(--piece-border-color);
-  border-left-color: transparent;
-  border-top-color: transparent;
+  border-left-color: transparent !important;
+  border-top-color: transparent !important;
 }
 
 .piece.female-right > span:nth-of-type(6),
