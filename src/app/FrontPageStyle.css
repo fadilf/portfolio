@@ -4,26 +4,49 @@
 	--piece-border-color: rgb(55 65 81);
 }
 
+@media only screen and (max-width: 1024px) {
+
+	#header-flex {
+		flex-wrap: wrap;
+	}
+
+	#header-text {
+		margin-top: 6rem;
+	}
+
+	#header-image {
+		margin-top: -41rem;
+		opacity: .25;
+	}
+
+	#code-block {
+		background: #111827a3;
+	}
+}
+
 @keyframes search {
 	0% {
-	  box-shadow: inset #030712 0 0 4rem 10rem;
+		box-shadow: inset #030712 0 0 4rem 10rem;
 	}
+
 	15% {
-	  box-shadow: inset #030712 0 0 4rem 5rem;
+		box-shadow: inset #030712 0 0 4rem 5rem;
 	}
+
 	100% {
-	  box-shadow: inset #030712 0 0 4rem 5.5rem;
+		box-shadow: inset #030712 0 0 4rem 5.5rem;
 	}
-  }
-  
-  @keyframes blurcycle {
+}
+
+@keyframes blurcycle {
 	0% {
-	  /* filter: blur(.25px); */
+		/* filter: blur(.25px); */
 	}
+
 	100% {
-	  /* filter: blur(1px); */
+		/* filter: blur(1px); */
 	}
-  }
+}
 
 .jigsaw-text {
 	display: inline-block;
@@ -146,11 +169,13 @@ h2 {
 	padding: 5rem 1.25rem;
 }
 
-#electronics-text {
-	vertical-align: middle;
-	display: inline-block;
-	width: calc(100% - 30rem);
-	text-align: right;
+.section-header {
+	max-width: 64rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .project-set {

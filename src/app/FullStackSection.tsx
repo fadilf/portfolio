@@ -69,8 +69,8 @@ export default function FullStackSection() {
 
 	return (
 		<section id="fullstack" className='project-section md:px-10'>
-			<div className='max-w-5xl mx-auto'>
-				<div id="fullstack-container" className='section-header-3d transition-hidden'>
+			<div className='section-header'>
+				<div className='section-header-3d transition-hidden'>
 					<Canvas camera={{ fov: 20, near: 0.1, far: 1000, position: [0, 0, 20] }}>
 						<Suspense fallback={null}>
 							<Design scale={2.7} position={[0, -2, 0]} rotation={[0, -Math.PI / 2, 0]} />
@@ -93,7 +93,7 @@ export default function FullStackSection() {
 						</Suspense>
 					</Canvas>
 				</div>
-				<div id='electronics-text'>
+				<div>
 					<h2 className='text-6xl font-semibold mb-3 text-gray-50'>Full Stack Design</h2>
 					<h3 className='font-semibold mb-3 text-gray-50'>Web student becomes the webmaster</h3>
 				</div>

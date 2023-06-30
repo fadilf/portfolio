@@ -51,7 +51,7 @@ export default function AIMLSection() {
 
 	return (
 		<section id="ai" className='project-section md:px-10'>
-			<div className='max-w-5xl mx-auto'>
+			<div className='section-header'>
 				<div id="robot-container" className='section-header-3d transition-hidden'>
 					<Canvas camera={{ fov: 20, near: 0.1, far: 1000, position: [0, 0, 20] }}>
 						<Suspense fallback={null}>
@@ -75,7 +75,7 @@ export default function AIMLSection() {
 						</Suspense>
 					</Canvas>
 				</div>
-				<div id='electronics-text'>
+				<div>
 					<h2 className='text-6xl font-semibold mb-3 text-gray-50'>AI/ML/Data</h2>
 					<h3 className='font-semibold mb-3 text-gray-50'>Parsers, pandas, and PyTorch</h3>
 				</div>

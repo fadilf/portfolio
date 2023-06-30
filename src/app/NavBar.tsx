@@ -45,7 +45,7 @@ function NavItem (
 	}) {
 	return (
 		<Link href={link} className='mx-1'>
-			<li className={`text-lg sm:inline-block px-6 h-20 leading-[5rem] text-gray-300 hover:text-gray-50 duration-200 hover:text-[#bfc260]`}>
+			<li className={`text-lg sm:inline-block px-6 h-20 leading-[5rem] text-gray-300 hover:text-gray-50 duration-200`}>
 				<span className='inline-block relative top-0.5 pr-1'>{icon}</span>
 				<span>{label}</span>
 			</li>

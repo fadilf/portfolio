@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 export default function Header() {
 
-	// let imgClasses: string[] = [];
 	let nameElem = useRef<HTMLSpanElement>(null);
 	let imgElem = useRef<HTMLDivElement>(null);
 	let imgContainer = useRef<HTMLDivElement>(null);
@@ -108,8 +107,8 @@ export default function Header() {
 
 	return (
         <header id='about' className='flex min-h-screen min-h-[100svh] align-middle justify-center'>
-			<div className='flex justify-center items-center'>
-				<div ref={stylingParent} className='max-w-xl relative z-10'>
+			<div id="header-flex" className='flex justify-center items-center'>
+				<div id="header-text" ref={stylingParent} className='max-w-xl relative z-10'>
 					<h1 className='text-7xl font-semibold text-gray-50 tracking-tight'>Hi, I'm<span ref={nameElem} className={clsx(
 						'inline-block', 'w-[22rem]', 'h-16', 'bg-cover', 'bg-[url(/name.svg)]', 'duration-[2000ms]', 'bg-[0_-1.35rem]', 'align-top', 'ml-[-0.45rem]'
 					)}></span></h1>
@@ -121,7 +120,7 @@ export default function Header() {
 							You can see my projects below and check out my <Link className='font-semibold' href="">CV</Link>, <Link target="_blank" className='font-semibold' href="https://github.com/fadilf/">GitHub</Link>, and <Link target="_blank" className='font-semibold' href="https://www.linkedin.com/in/fadileledath/">LinkedIn</Link>.
 						</p>
 					</div>
-					<div className={clsx(
+					<div id="code-block" className={clsx(
 						'inline-block bg-gray-900 min-w-[32rem] align-top',
 						'mt-4 px-4 py-3 border-2 border-gray-800 rounded-md',
 						'text-left text-xs text-gray-600 font-mono whitespace-pre-wrap')
@@ -131,7 +130,7 @@ export default function Header() {
 						<div>{'}'}</div>
 					</div>
 				</div>
-				<div>
+				<div id="header-image">
 					<div className='duration-300' ref={imgContainer}>
 						<div ref={dottedBg} className='h-80 w-0 duration-300 -mb-80 relative scale-[2] -rotate-3 shadow-[inset_#030712_0_0_4rem_10rem] -z-10'></div>
 						<div ref={veilElem} className='bg-gray-900 h-80 w-0 duration-300 -mb-80'></div>

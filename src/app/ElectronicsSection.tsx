@@ -69,7 +69,7 @@ export default function ElectronicsSection() {
 
 	return (
 		<section id="electronics" className='project-section md:px-10'>
-			<div className='max-w-5xl mx-auto'>
+			<div className='section-header'>
 				<div id="lcd-container" className='section-header-3d transition-hidden'>
 					<Canvas camera={{ fov: 27, near: 0.1, far: 1000, position: [0, 0, 20] }}>
 						<Suspense fallback={null}>
@@ -93,7 +93,7 @@ export default function ElectronicsSection() {
 						</Suspense>
 					</Canvas>
 				</div>
-				<div id='electronics-text'>
+				<div>
 					<h2 className='text-6xl font-semibold mb-3 text-gray-50'>Electronics</h2>
 					<h3 className='font-semibold mb-3 text-gray-50'>Systems, signals, and solder</h3>
 				</div>
