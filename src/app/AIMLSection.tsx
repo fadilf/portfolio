@@ -10,7 +10,7 @@ const AIMLItems = [
 		title: "Bill.com Receipt Challenge",
 		doneFor: "Rice Datathon",
 		timePeriod: [2023],
-		extract: "",
+		extract: "My team trained a model using fuzzy matching to match receipt data to entries in a table, optimizing the model using third party data from Google Maps and OCR positional information.",
 		skills: ["php", "python"],
 		image: "/thumbnails/bill.png",
 	},
