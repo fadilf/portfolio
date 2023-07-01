@@ -113,7 +113,7 @@ export default function Header() {
 							Developer of things that are novel and practical, physical and digital, at every level of abstraction. Currently working at DMC Inc.
 						</p>
 						<p className='my-1'>
-							You can see my projects below and check out my <Link className='font-semibold' href="">CV</Link>, <Link target="_blank" className='font-semibold' href="https://github.com/fadilf/">GitHub</Link>, and <Link target="_blank" className='font-semibold' href="https://www.linkedin.com/in/fadileledath/">LinkedIn</Link>.
+							You can see my projects below and check out my <Link target="_blank" className='font-semibold' href="https://github.com/fadilf/">GitHub</Link> and <Link target="_blank" className='font-semibold' href="https://www.linkedin.com/in/fadileledath/">LinkedIn</Link>.
 						</p>
 					</div>
 					<div id="code-block">
