@@ -30,6 +30,7 @@
 	font-weight: 600;
 	color: theme('colors.gray.50');
 	letter-spacing: -0.025em;
+	margin-left: -4px;
 }
 
 #header-text h1 span {
@@ -168,6 +169,7 @@
 
 h2 {
 	letter-spacing: -1px;
+	margin-left: -3px;
 }
 
 .project-section {
@@ -253,6 +255,7 @@ h2 {
 .project-title {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
+	margin-left: -1px;
 }
 
 .project-specs {

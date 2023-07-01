@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useRef } from 'react';
-import clsx from 'clsx';
 import Typed from 'typed.js';
 import Link from 'next/link';
 
@@ -12,7 +11,7 @@ export default function Header() {
 	let veilElem = useRef<HTMLDivElement>(null);
 	let dottedBg = useRef<HTMLDivElement>(null);
 	let stylingsElem = useRef(null);
-	let interval = 5;
+	const interval = 5;
 
 	const stylingsArr = [
 `background-color: #27272a;`,
@@ -102,13 +101,13 @@ export default function Header() {
 		return () => {
 			typed.destroy();
 		};
-	}, []);
+	}, [interval, stylingsArr]);
 
 	return (
         <header id='about'>
 			<div id="header-flex">
 				<div id="header-text">
-					<h1>Hi, I'm&nbsp;<span ref={nameElem}></span></h1>
+					<h1>Hi, I&apos;m&nbsp;<span ref={nameElem}></span></h1>
 					<div className='mt-1 mb-5'>
 						<p className='my-1'>
 							Developer of things that are novel and practical, physical and digital, at every level of abstraction. Currently working at DMC Inc.

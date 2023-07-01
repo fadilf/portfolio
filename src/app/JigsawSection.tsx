@@ -7,7 +7,7 @@ export default function JigsawSection() {
                 <h3 className='font-semibold mb-3 text-gray-50'>Learning to do 🤝 Doing to learn</h3>
                 <div className='max-w-2xl'>
                     <p className='mb-2'>
-                        As you'll see below, I keep busy with projects that are interesting, refine what I know, and throw me into the deep end of something new.
+                        As you&apos;ll see below, I keep busy with projects that are interesting, refine what I know, and throw me into the deep end of something new.
                     </p>
                     <p>
                         I started in full stack development by pasting HTML snippets in Blogger, in electronics with Lego robots, and in data science by scraping Spanish tests to study vocab.
