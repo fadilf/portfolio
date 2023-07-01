@@ -64,7 +64,7 @@ export default function Robot(props: JSX.IntrinsicElements["group"]) {
 					easel.current.rotation.y = - Math.PI / 2 + rotationOffset;
 					robotArm.current.rotation.y = Math.PI / 2 - rotationOffset;
 					easel.current.position.z = 4;
-					section2.current.rotation.x = - 0.25;
+					section2.current.rotation.x = - 0.15;
 					section3.current.rotation.x = 1.12;
 				} else {
 					easel.current.rotation.y = - (Math.PI / 2) * ((increment / 2) + .5) + rotationOffset;
