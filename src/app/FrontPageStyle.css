@@ -287,6 +287,11 @@ h2 {
 	background-color: rgb(31 41 55);
 }
 
+@media only screen and (max-width: 1140px) and (min-width: 1024px) {
+	#header-text {
+		margin-right: -6rem;
+	}
+}
 
 @media only screen and (max-width: 1024px) {
 
@@ -303,6 +308,8 @@ h2 {
 
 	#header-image {
 		margin-top: -41rem;
+		margin-left: 15%;
+		margin-right: -15%;
 		opacity: .25;
 	}
 

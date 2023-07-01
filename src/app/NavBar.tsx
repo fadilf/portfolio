@@ -17,13 +17,13 @@ export default function NavBar() {
 						Fadil Eledath
 					</div>
 				</Link>
-				<button onClick={()=>setNavMobileOpen(!navMobileOpen)} type="button" className="inline-flex items-center px-3 h-20 sm:hidden duration-200 focus:outline-none">
+				<button onClick={()=>setNavMobileOpen(!navMobileOpen)} type="button" className="inline-flex items-center px-6 h-20 sm:hidden duration-200 focus:outline-none">
 					<span className="sr-only">Open main menu</span>
 					<GiHamburgerMenu className='text-xl' />
 				</button>
-				<ul className={`list-none sm:block max-sm:fixed max-sm: ${navMobileOpen ? 'right-0' : '-right-full'} max-sm:top-20 max-sm:h-screen max-sm:bg-gray-900 duration-300`}>
-					<NavItem label="" link="#about" icon={<BsFillPersonFill />} />
-					<NavItem label="" link="#contact" icon={<BsFillChatLeftTextFill />} />
+				<ul className={`list-none sm:block max-sm:fixed max-sm: ${navMobileOpen ? 'right-0' : '-right-full'} max-sm:top-20 max-sm:h-screen max-sm:bg-gray-950/60 backdrop-blur duration-300`}>
+					<NavItem label="" link="#top" icon={<BsFillPersonFill />} />
+					{/* <NavItem label="" link="#contact" icon={<BsFillChatLeftTextFill />} /> */}
 					<NavItem label="" link="#electronics" icon={<BsFillMotherboardFill />} />
 					<NavItem label="" link="#ai" icon={<FaBrain />} />
 					<NavItem label="" link="#fullstack" icon={<FaCode />} />

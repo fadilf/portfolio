@@ -15,7 +15,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" id="top">
 			<body className={clsx(ibmPlex.className, 'bg-gray-950','text-gray-300', 'font-normal', 'overflow-x-hidden')}>
 				<NavBar />
 				<main>
