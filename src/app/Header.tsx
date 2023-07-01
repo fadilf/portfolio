@@ -1,6 +1,6 @@
 'use client'
-import { useEffect, useState, useRef } from 'react';
-import clsx, { ClassArray, ClassDictionary } from 'clsx';
+import { useEffect, useRef } from 'react';
+import clsx from 'clsx';
 import Typed from 'typed.js';
 import Link from 'next/link';
 
@@ -12,7 +12,6 @@ export default function Header() {
 	let veilElem = useRef<HTMLDivElement>(null);
 	let dottedBg = useRef<HTMLDivElement>(null);
 	let stylingsElem = useRef(null);
-	let stylingParent = useRef<HTMLDivElement>(null);
 	let interval = 5;
 
 	const stylingsArr = [
@@ -43,7 +42,7 @@ export default function Header() {
 						imgElem.current!.style.width = "28rem";
 						imgContainer.current!.style.marginLeft = "5rem";
 						veilElem.current!.style.width = "28rem";
-						dottedBg.current!.style.animation = "1400ms ease-in-out 300ms 1 normal forwards running search, 2000ms ease-in-out 0s infinite alternate none running blurcycle";
+						dottedBg.current!.style.animation = "1400ms ease-in-out 300ms 1 normal forwards running search";
 						dottedBg.current!.style.width = "28rem";
 						dottedBg.current!.style.background = "url('/dotted.svg'), radial-gradient(#2e2f1a, #030712)";
 						dottedBg.current!.style.backgroundSize = "4.5rem, auto";
@@ -60,7 +59,7 @@ export default function Header() {
 						break;
 					case 4:
 						setTimeout(function(){
-							stylingParent.current!.querySelector<HTMLElement>('.typed-cursor')!.style.display = "none";
+							document.querySelector<HTMLElement>('#header-text .typed-cursor')!.style.display = "none";
 							startGallery();
 						}, 500);
 						break;
@@ -106,12 +105,10 @@ export default function Header() {
 	}, []);
 
 	return (
-        <header id='about' className='flex min-h-screen min-h-[100svh] align-middle justify-center'>
-			<div id="header-flex" className='flex justify-center items-center'>
-				<div id="header-text" ref={stylingParent} className='max-w-xl relative z-10'>
-					<h1 className='text-7xl font-semibold text-gray-50 tracking-tight'>Hi, I'm<span ref={nameElem} className={clsx(
-						'inline-block', 'w-[22rem]', 'h-16', 'bg-cover', 'bg-[url(/name.svg)]', 'duration-[2000ms]', 'bg-[0_-1.35rem]', 'align-top', 'ml-[-0.45rem]'
-					)}></span></h1>
+        <header id='about'>
+			<div id="header-flex">
+				<div id="header-text">
+					<h1>Hi, I'm&nbsp;<span ref={nameElem}></span></h1>
 					<div className='mt-1 mb-5'>
 						<p className='my-1'>
 							Developer of things that are novel and practical, physical and digital, at every level of abstraction. Currently working at DMC Inc.
@@ -120,11 +117,7 @@ export default function Header() {
 							You can see my projects below and check out my <Link className='font-semibold' href="">CV</Link>, <Link target="_blank" className='font-semibold' href="https://github.com/fadilf/">GitHub</Link>, and <Link target="_blank" className='font-semibold' href="https://www.linkedin.com/in/fadileledath/">LinkedIn</Link>.
 						</p>
 					</div>
-					<div id="code-block" className={clsx(
-						'inline-block bg-gray-900 min-w-[32rem] align-top',
-						'mt-4 px-4 py-3 border-2 border-gray-800 rounded-md',
-						'text-left text-xs text-gray-600 font-mono whitespace-pre-wrap')
-					}>
+					<div id="code-block">
 						<div>{`#header-image {`}</div>
 						<div>    <span ref={stylingsElem}></span></div>
 						<div>{'}'}</div>
