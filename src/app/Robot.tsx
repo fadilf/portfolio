@@ -43,8 +43,8 @@ type GLTFResult = GLTF & {
 	};
 };
 
-export default function Robot(props: JSX.IntrinsicElements["group"]) {
-	const { nodes, materials } = useGLTF("/3d/AI.glb") as GLTFResult;
+export default function Robot(props: React.ComponentProps<'group'>) {
+	const { nodes, materials } = useGLTF("/3d/AI.glb") as unknown as GLTFResult;
 	const easel = useRef<THREE.Group>(null!);
 	const robotArm = useRef<THREE.Mesh>(null!);
 	const section2 = useRef<THREE.Mesh>(null!);

@@ -25,9 +25,9 @@ type GLTFResult = GLTF & {
 	};
 };
 
-const LCD = function LCD(props: JSX.IntrinsicElements["group"]) {
+const LCD = function LCD(props: React.ComponentProps<'group'>) {
 
-	const { nodes, materials } = useGLTF("/3d/LCDBW.glb") as GLTFResult;
+	const { nodes, materials } = useGLTF("/3d/LCDBW.glb") as unknown as GLTFResult;
 	const myMesh = useRef<THREE.Group>(null!);
 	const lcdContainer = document.getElementById('lcd-container');
 	let clockStart = 0;

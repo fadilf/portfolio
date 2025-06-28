@@ -16,8 +16,8 @@ type GLTFResult = GLTF & {
   };
 };
 
-export default function Model(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/3d/Design.glb") as GLTFResult;
+export default function Model(props: React.ComponentProps<'group'>) {
+  const { nodes, materials } = useGLTF("/3d/Design.glb") as unknown as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh
